@@ -9,6 +9,29 @@
 
 </head>
 <body>
-    
+<form>
+    <fieldset>
+        <legend>Library of Congress Search Engine</legend>
+        <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">City</label>
+        <input type="text" id="cityInput" class="form-control" placeholder="City">
+        </div>
+        <div class="mb-3">
+        <label for="select" class="form-label">Format</label>
+        <select id="select" class="form-select">
+          <option value="maps">Maps</option>
+          <option value="audio">Audio Recordings</option>
+          <option value="photos">Photo, Print, Drawing</option>
+          <option value ="manuscript">Manuscripts/Mixed Material</option>
+          <option value="newspapers">Newspapers</option>
+          <option value="film-and-videos">Films, Videos</option>
+          <option value="notated-music">Printed Music, Such as Sheet Music</option>
+          <option value="websites">Archived Website</option>
+        </select>
+        </div>
+        <button type="button" class="btn btn-primary" id="search-button">Submit</button>
+    </fieldset>
+    </form>
+    <script src="./script.js"></script>
 </body>
 </html>
