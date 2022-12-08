@@ -18,11 +18,10 @@ var searchResults = function (event) {
 
 var getSearchResult = function(location, format){
     console.log("test");
-    var apiURL = 'https://www.loc.gov/' + format + '/?fa=location:' + location;
+    var apiURL = 'https://www.loc.gov/' + format + '/?q=' + location + '&fo=json';
     console.log(apiURL);
-    var placeholder = 'https://jsonplaceholder.typicode.com/posts';
 
-    fetch(placeholder)
+    fetch(apiURL)
         .then(function(response){
             if (response.ok){
             response.json()
@@ -37,7 +36,7 @@ var getSearchResult = function(location, format){
 };
 
 var displayResults = function(data){
-    console.log("hello");
+    console.log("you're here! YAY");
 };
 
 
