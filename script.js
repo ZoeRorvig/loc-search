@@ -27,7 +27,7 @@ var getSearchResult = function(location, format){
             response.json()
                 .then(function (data) {
                 console.log('Loc Gov', data);
-                displayResults(data);
+                displayResults(data.results, location, format);
             });
             } else {
                 alert('Error: ' + response.statusText);
@@ -35,8 +35,18 @@ var getSearchResult = function(location, format){
         });
 };
 
-var displayResults = function(data){
-    console.log("you're here! YAY");
+var displayResults = function(data, location, format){
+    console.log(data, location, format);
+
+    for(var i = 0; i < data.length; i++){
+        var dataTitle = data[i].title;
+        var cardID = document.querySelector('#card'+ i );
+        console.log(cardID);
+
+        console.log(dataTitle);
+        // $('#'+i).children().children('.card-title').val(data[i].title);
+
+    }
 };
 
 
